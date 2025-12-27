@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>متجر اللوحات والديكور</title>
+  <style>
+    body {font-family: Tahoma, Arial; background:#f4f4f4; margin:0}
+    header {background:#000; color:#fff; padding:25px; text-align:center}
+    .container {width:92%; margin:auto}
+    .products {display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; margin:30px 0}
+    .card {background:#fff; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,.12); padding:15px}
+    .card img {width:100%; border-radius:12px}
+    .price {margin:12px 0; font-size:14px; color:#222; line-height:1.8}
+    select, input {width:100%; padding:10px; margin:6px 0; border-radius:8px; border:1px solid #ccc}
+    .order-btn {background:#000; color:#fff; border:none; width:100%; padding:12px; border-radius:10px; cursor:pointer; font-size:15px}
+    .order-btn:hover {background:#333}
+    footer {background:#111; color:#fff; text-align:center; padding:18px; font-size:14px}
+  </style>
+</head>
+<body><header>
+  <img src="logo.png" alt="Do Design" style="width:140px;margin-bottom:10px" />
+  <h1>Do Design</h1>
+  <p>ديكورات فاخرة – اطلب بسهولة – توصيل لكل المحافظات</p>
+  <p>📞 01277300839 | 01025124046</p>
+</header><div class="container">
+  <div style="background:#000;color:#fff;padding:12px;border-radius:10px;text-align:center;margin-top:20px">
+    🔥 طلبات اليوم: <span id="orders">7</span> | ⏱️ التوصيل خلال 4 – 6 أيام | 💳 ديبوزيت إجباري 200ج
+  </div>
+  <p style="background:#fff;padding:12px;border-radius:10px;font-size:14px;line-height:1.8">
+    ⏱️ <strong>مدة التنفيذ:</strong> يتم تجهيز الأوردر خلال <strong>4 إلى 6 أيام</strong><br>
+    💳 <strong>تأكيد الطلب:</strong> يتم دفع <strong>ديبوزيت 200 ج</strong> (يُخصم من إجمالي السعر عند الاستلام)
+  </p>
+  <div class="products"><!-- منتج 1 -->
+<div class="card">
+  <img src="elephant.jpg" alt="عائلة الفيلة">
+  <h3>لوحة عائلة الفيلة</h3>
+  <div class="price">$1</div>
+  <p style="color:#b00;font-size:13px">⚠️ لتأكيد الأوردر يلزم دفع <strong>ديبوزيت 200 ج</strong> فودافون كاش<br>🚚 سعر التوصيل حسب المقاس:<br>• 80–100 سم: 150 ج<br>• 120 سم: 230 ج<br>• 150 سم: 280 ج</p>
+  <select id="size1">
+    <option>80 سم</option><option>100 سم</option><option>120 سم</option><option>150 سم</option>
+  </select>
+  <input id="name1" placeholder="اسمك" />
+  <input id="phone1" placeholder="رقم الموبايل" />
+  <button class="order-btn" onclick="order('لوحة عائلة الفيلة','size1','name1','phone1')">اطلب الآن</button>
+</div>
+
+
+<!-- منتج 2 -->
+<div class="card">
+  <img src="feather.jpg" alt="ريشة">
+  <h3>ساعة الريشة الأسود × الذهبي</h3>
+  <div class="price">$1</div>
+  <p style="color:#b00;font-size:13px">⚠️ لتأكيد الأوردر يلزم دفع <strong>ديبوزيت 200 ج</strong> فودافون كاش<br>🚚 سعر التوصيل حسب المقاس:<br>• 80–100 سم: 150 ج<br>• 120 سم: 230 ج<br>• 150 سم: 280 ج</p>
+  <select id="size2">
+    <option>80 سم</option><option>100 سم</option><option>120 سم</option><option>150 سم</option>
+  </select>
+  <input id="name2" placeholder="اسمك" />
+  <input id="phone2" placeholder="رقم الموبايل" />
+  <button class="order-btn" onclick="order('ساعة الريشة','size2','name2','phone2')">اطلب الآن</button>
+</div>
+
+
+<!-- منتج 3 -->
+<div class="card">
+  <img src="allah.jpg" alt="لفظ الجلالة">
+  <h3>لوحة لفظ الجلالة</h3>
+  <div class="price">$1</div>
+  <p style="color:#b00;font-size:13px">⚠️ لتأكيد الأوردر يلزم دفع <strong>ديبوزيت 200 ج</strong> فودافون كاش<br>🚚 سعر التوصيل حسب المقاس:<br>• 80–100 سم: 150 ج<br>• 120 سم: 230 ج<br>• 150 سم: 280 ج</p>
+  <select id="size3">
+    <option>80 سم</option><option>100 سم</option><option>120 سم</option><option>150 سم</option>
+  </select>
+  <input id="name3" placeholder="اسمك" />
+  <input id="phone3" placeholder="رقم الموبايل" />
+  <button class="order-btn" onclick="order('لوحة لفظ الجلالة','size3','name3','phone3')">اطلب الآن</button>
+</div>
+
+
+<!-- منتج 4 -->
+<div class="card">
+  <img src="blueclock.jpg" alt="رخام أزرق">
+  <h3>ساعة رخام أزرق × ذهبي</h3>
+  <div class="price">$1</div>
+  <p style="color:#b00;font-size:13px">⚠️ لتأكيد الأوردر يلزم دفع <strong>ديبوزيت 200 ج</strong> فودافون كاش<br>🚚 سعر التوصيل حسب المقاس:<br>• 80–100 سم: 150 ج<br>• 120 سم: 230 ج<br>• 150 سم: 280 ج</p>
+  <select id="size4">
+    <option>80 سم</option><option>100 سم</option><option>120 سم</option><option>150 سم</option>
+  </select>
+  <input id="name4" placeholder="اسمك" />
+  <input id="phone4" placeholder="رقم الموبايل" />
+  <button class="order-btn" onclick="order('ساعة رخام أزرق','size4','name4','phone4')">اطلب الآن</button>
+</div>
+
+
+  </div>
+</div><div style="background:#000;color:#fff;text-align:center;padding:10px;font-size:14px">📊 طلبات اليوم: <span id="orders">7</span></div>
+<footer>
+  <p>📞 تواصل: 01277300839 | 01025124046</p>
+  <p>🟢 واتساب + فودافون كاش: 01025124046</p>
+</footer><script>
+  let orders = 7;
+  setInterval(()=>{
+    orders += Math.floor(Math.random()*2);
+    document.getElementById('orders').innerText = orders;
+  },4000);
+
+
+  function order(product,sizeId,nameId,phoneId){
+    let size = document.getElementById(sizeId).value;
+    let name = document.getElementById(nameId).value;
+    let phoneUser = document.getElementById(phoneId).value;
+
+
+    let phone = '201025124046';
+    let msg = `طلب جديد%0Aالمنتج: ${product}%0Aالمقاس: ${size}%0Aالاسم: ${name}%0Aموبايل: ${phoneUser}%0A⏱️ التنفيذ: 4-6 أيام%0A💳 ديبوزيت: 200 ج فودافون كاش`;
+
+
+    window.open(`https://wa.me/${phone}?text=${msg}`);
+  }
+
+
+  function sendReceipt(){
+    let phone = '201025124046';
+    let msg = 'تم دفع الديبوزيت – مرفق إيصال التحويل 📸';
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
+  }
+</script></body>
+</html>
